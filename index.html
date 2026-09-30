@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real-Time Student Attendance System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>Real-Time Student Attendance System</h1>
+<p>Live attendance management using Firebase Realtime Database</p>
+</header>
+<main class="container">
+<section class="card">
+<h2>Add Student</h2>
+<div class="form-row">
+<input id="studentName" placeholder="Student name">
+<input id="rollNo" placeholder="Roll number">
+<button onclick="addStudent()">Add Student</button>
+</div>
+<p id="message"></p>
+</section>
+
+<section class="stats">
+<div class="stat"><span id="total">0</span><small>Total Students</small></div>
+<div class="stat"><span id="present">0</span><small>Present</small></div>
+<div class="stat"><span id="absent">0</span><small>Absent</small></div>
+</section>
+
+<section class="card">
+<div class="table-head"><h2>Live Attendance</h2><span class="live">● LIVE</span></div>
+<table>
+<thead><tr><th>#</th><th>Name</th><th>Roll No.</th><th>Status</th><th>Action</th></tr></thead>
+<tbody id="studentTable"></tbody>
+</table>
+</section>
+</main>
+<footer>Mini Project – Real-Time Database Application</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
